@@ -1,0 +1,26 @@
+---
+name: macos-tahome-cursor-snap
+version: '1.0'
+base: core22
+license: GPL-3.0
+grade: stable
+confinement: strict
+summary: macos-tahome-cursor-snap
+description: |
+  macos-tahome-cursor-snap
+slots:
+  icon-themes:
+    interface: content
+    source:
+      read:
+        - $SNAP/share/icons/MacOS-Tahoe-Cursor
+parts:
+  cursors:
+    plugin: dump
+    source: ./MacOS-Tahoe-Cursor.zip
+    override-build: |
+      snapcraftctl build
+      mkdir -p $SNAPCRAFT_PART_INSTALL/share/icons
+      mv -f $SNAPCRAFT_PART_INSTALL/MacOS-Tahoe-Cursor $SNAPCRAFT_PART_INSTALL/share/icons/
+    stage:
+      - share/icons/MacOS-Tahoe-Cursor
