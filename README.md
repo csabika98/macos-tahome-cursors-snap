@@ -1,7 +1,12 @@
 This snap package contains the MacOS-Tahoe-Cursor Theme, an X-cursor theme inspired by macOS.
 https://www.gnome-look.org/p/2300466
 
-The goal of this snap package is to unify your cursor themes, as snap packages do not have direct access to the /usr/share/icons directory. If you set a custom cursor 
+The goal of this snap package is to unify your cursor themes, as snap packages do not have direct access to the /usr/share/icons directory. If you set a custom cursor that is not applied to your snap packages for example.
+
+Use-case of this repo:
+1. You have installed the following cursors globally: https://www.gnome-look.org/p/2300466
+2. You want to make the same cursors applied to your snap packages
+
 
 ![1](readme-resources/1.png)
 Cursor created by Moyash
